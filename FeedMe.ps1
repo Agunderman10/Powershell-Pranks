@@ -1,18 +1,21 @@
 ﻿[CmdletBinding()]            
-param(            
-[switch]$Eject,            
-[switch]$Close            
-)            
-try {            
+param([switch]$Eject, [switch]$Close) 
+try 
+{            
     $Diskmaster = New-Object -ComObject IMAPI2.MsftDiscMaster2            
     $DiskRecorder = New-Object -ComObject IMAPI2.MsftDiscRecorder2            
     $DiskRecorder.InitializeDiscRecorder($DiskMaster)            
-    if ($Eject) {            
+    if ($Eject) 
+    {            
      $DiskRecorder.EjectMedia()            
-    } elseif($Close) {            
+    } 
+    elseif($Close) 
+    {            
      $DiskRecorder.CloseTray()            
     }            
-} catch {            
+} 
+catch 
+{            
     Write-Error "Failed to operate the disk. Details : $_"            
 }
 
