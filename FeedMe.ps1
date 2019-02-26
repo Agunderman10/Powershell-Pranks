@@ -25,6 +25,12 @@ $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
 while(1)
 {
     $DiskRecorder.EjectMedia()
+    #uncomment next line if you want to see different voices your operating system supports
+    #$speak.GetInstalledVoices().VoiceInfo
+    
+    #uncomment next line if you want woman's voice, depending on if your operating system supports her voice.
+    #you can change the voices by changing voice names below if you have multiple voices
+    #$speak.SelectVoice('Microsoft Zira Desktop')
     $speak.Speak('feed me')
     $DiskRecorder.CloseTray()
     Start-Sleep -s 60
