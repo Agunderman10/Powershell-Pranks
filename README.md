@@ -7,4 +7,5 @@ A short compilation of simple Powershell pranks
 
  * Or, if you have Git installed, you can just clone these programs into your own local repos and run them from there. 
 
-Just a reminder: beware where and how long you run some of these programs for some programs may or may not freeze or crash your computer.
+#### Disclaimer:
+    I am not responsible for any damage that these programs cause to you or anyone else's property/computer. Use any of these programs at your own risk. It is your responsibility to fix any damages caused to property by running these programs.
