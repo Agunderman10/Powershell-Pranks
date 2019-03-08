@@ -1,4 +1,5 @@
-﻿[CmdletBinding()]            
+#Powershell script that opens the disk drive and says "Feed Me" recursively every 60 seconds.
+[CmdletBinding()]            
 param([switch]$Eject, [switch]$Close) 
 try 
 {            
@@ -33,5 +34,7 @@ while(1)
     #$speak.SelectVoice('Microsoft Zira Desktop')
     $speak.Speak('feed me')
     $DiskRecorder.CloseTray()
+    
+    #this causes the program to wait for a minute before restarting, if you dont want it to stop simply delete this next line
     Start-Sleep -s 60
 }
